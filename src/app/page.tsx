@@ -1,101 +1,49 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+    <main className="bg-gradient-to-br from-[#eef2f7] to-[#d9e2ec] min-h-screen flex flex-col items-center justify-center py-12">
+      <section className="text-center space-y-4">
+        <h1 className="text-5xl font-extrabold text-[#1c3549] animate-fadeIn">
+          Welcome to the Student Result Portal
+        </h1>
+        <p className="text-lg text-gray-700 max-w-2xl mx-auto animate-slideUp">
+          Stay updated with your academic performance. Easily access and review your exam results in real-time.
+        </p>
+      </section>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+      <div className="mt-10 space-y-4">
+        <Link href="/result"><button  className="bg-[#1c3549] text-white font-bold py-3 px-8 rounded-lg shadow-lg hover:bg-[#2c4662] transition-transform transform hover:scale-105 animate-bounce">
+          View Results
+        </button></Link>
+      </div>
+      <section className="mt-16 flex flex-col lg:flex-row items-center justify-between px-8 lg:px-20 space-y-8 lg:space-y-0 lg:space-x-12">
+        <div className="relative w-full lg:w-1/2">
+          <div className="absolute inset-0 bg-gradient-to-br from-[#1c3549] via-[#2c4662] to-transparent opacity-40 rounded-lg"></div>
+          <Image
+            src="/hero.png"
+            alt="Student Exam Portal"
+            className="rounded-lg shadow-lg w-full h-auto z-10 relative"
+            width={800}
+            height={600}
+          />
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+        <div className="w-full lg:w-1/2 space-y-6 text-[#1c3549]">
+          <h2 className="text-4xl font-semibold animate-pulse">
+            Your Academic Journey at Your Fingertips
+          </h2>
+          <p className="text-gray-700 text-lg leading-relaxed">
+            This portal is designed to provide students with quick and easy access to their exam results and academic records. No more waiting for long hours—your results are just a click away.
+          </p>
+          <p className="text-gray-700 text-lg leading-relaxed">
+            Whether youre tracking your progress, checking for improvements, or just reviewing past performance, this portal is your companion through every step of your academic journey.
+          </p>
+          <p className="text-gray-700 text-lg leading-relaxed">
+            Our goal is to ensure students have the tools they need to succeed. With a user-friendly interface and secure, real-time data, managing your academic progress has never been easier.
+          </p>
+        </div>
+      </section>
+    </main>
   );
 }
